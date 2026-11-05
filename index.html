@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shristi Rawat | Data Analyst Portfolio</title>
+
+<meta name="description"
+content="Shristi Rawat - Data Analyst Portfolio featuring Excel, SQL, Python, Power BI, Tableau and Data Visualization projects.">
+
+<!-- Chart.js for Interactive Dashboard -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Font Awesome Icons for Skills & UI Buttons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container nav-inner">
+        <a href="#" class="logo">Shristi <span>Rawat</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#dashboard">Live Dashboard</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero">
+    <div class="container hero-grid">
+        <div class="hero-text">
+            <span class="badge"><i class="fa-solid fa-chart-line"></i> Data Analyst & Visualization Expert</span>
+            <h1>Transforming Data into <span class="highlight">Actionable Insights</span></h1>
+            <p>Hi, I'm Shristi Rawat. I specialize in turning complex datasets into clear, actionable business strategies through advanced SQL querying, Python analytics, Excel modeling, and dynamic Power BI & Tableau dashboards.</p>
+            <div class="button-row">
+                <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-folder-open"></i> View Projects</a>
+                <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+            </div>
+        </div>
+        <div class="profile-wrap">
+            <img src="https://placehold.co/300x300/0b1729/22d3ee?text=Shristi+Rawat" alt="Shristi Rawat Profile" class="profile-photo" onerror="this.src='https://placehold.co/300x300/0b1729/22d3ee?text=SR'">
+            <div class="photo-caption">Based in India • Open to Global Remote Opportunities</div>
+        </div>
+    </div>
+</header>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="section-heading">
+            <h2>About Me</h2>
+            <p>Combining quantitative analysis with visual storytelling to drive data-informed business decisions.</p>
+        </div>
+        <div class="about-grid">
+            <div class="card">
+                <h3>Analytical Mindset & Business Acumen</h3>
+                <p>I am a passionate Data Analyst dedicated to extracting value from structured and unstructured data. My expertise spans data cleaning, statistical modeling, ETL pipelines, and designing high-impact interactive dashboards.</p>
+                <p>Whether optimizing sales funnels, forecasting trends, or understanding customer retention, I bridge the gap between complex raw data and strategic executive decisions.</p>
+            </div>
+            <div class="card">
+                <h3>Quick Highlights</h3>
+                <div class="info-list">
+                    <div class="info-item">
+                        <strong>Primary Focus</strong>
+                        <span>Business Intelligence, Exploratory Data Analysis (EDA)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Key Toolkit</strong>
+                        <span>SQL, Python (Pandas/NumPy), Power BI, Tableau, Excel</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Education</strong>
+                        <span>BBA, Diploma Data Analyst</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Availability</strong>
+                        <span>Full-time & Project-based Consulting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STATS ROW -->
+        <div class="stats">
+            <div class="stat">
+                <strong>15+</strong>
+                <span>Projects Completed</span>
+            </div>
+            <div class="stat">
+                <strong>99.8%</strong>
+                <span>Data Accuracy</span>
+            </div>
+            <div class="stat">
+                <strong>5+</strong>
+                <span>Live Dashboards</span>
+            </div>
+            <div class="stat">
+                <strong>3+ Years</strong>
+                <span>Analytical Expertise</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INTERACTIVE DASHBOARD SECTION -->
+<section id="dashboard" class="section">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Interactive Analytics Dashboard</h2>
+            <p>An embedded real-time analytical simulation built to showcase data presentation and metrics tracking.</p>
+        </div>
+        <div class="dashboard">
+            <div class="dashboard-header">
+                <div>
+                    <h3>E-Commerce Performance Overview</h3>
+                    <p>Real-time simulated metrics for quarterly operational analysis</p>
+                </div>
+                <span class="live-badge"><span class="live-dot"></span> Live Overview</span>
+            </div>
+
+            <!-- KPI Cards Grid -->
+            <div class="kpi-grid">
+                <div class="kpi">
+                    <small>Total Revenue</small>
+                    <strong>$482,950</strong>
+                </div>
+                <div class="kpi">
+                    <small>Active Customers</small>
+                    <strong>12,480</strong>
+                </div>
+                <div class="kpi">
+                    <small>Conversion Rate</small>
+                    <strong>3.42%</strong>
+                </div>
+                <div class="kpi">
+                    <small>Avg Order Value</small>
+                    <strong>$88.60</strong>
+                </div>
+            </div>
+
+            <!-- Dynamic Charts -->
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h4>Monthly Revenue & Target Growth ($)</h4>
+                    <div class="chart-box">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h4>Sales Distribution by Category</h4>
+                    <div class="chart-box">
+                        <canvas id="categoryChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Featured Projects</h2>
+            <p>Explore recent analytical projects, data modeling workflows, and dashboard visualizations.</p>
+        </div>
+        <div class="project-grid">
+            
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="https://placehold.co/600x400/0b1729/22d3ee?text=E-Commerce+Analytics" alt="E-commerce Analysis" class="project-image" onerror="this.src='https://placehold.co/600x400/0b1729/22d3ee?text=Project+1'">
+                <div class="project-content">
+                    <h3>E-Commerce Sales & Cohort Analysis</h3>
+                    <p>Analyzed 100k+ transaction records to identify customer lifetime value (CLV) patterns and churn rates using SQL and Python cohort grids.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Pandas</span>
+                        <span>Power BI</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#dashboard" class="btn btn-outline"><i class="fa-solid fa-eye"></i> Demo</a>
+                        <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <img src="https://placehold.co/600x400/0b1729/3b82f6?text=Churn+Prediction" alt="Customer Churn Prediction" class="project-image" onerror="this.src='https://placehold.co/600x400/0b1729/3b82f6?text=Project+2'">
+                <div class="project-content">
+                    <h3>Telecom Customer Churn Model</h3>
+                    <p>Built predictive logistic regression and decision tree models in Python to forecast customer attrition risk with an 87% accuracy rate.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Scikit-Learn</span>
+                        <span>Seaborn</span>
+                        <span>Excel</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#dashboard" class="btn btn-outline"><i class="fa-solid fa-eye"></i> Demo</a>
+                        <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project">
+                <img src="https://placehold.co/600x400/0b1729/67e8f9?text=Financial+Dashboard" alt="Financial Dashboard" class="project-image" onerror="this.src='https://placehold.co/600x400/0b1729/67e8f9?text=Project+3'">
+                <div class="project-content">
+                    <h3>Executive Financial Performance</h3>
+                    <p>Designed an interactive Tableau dashboard tracking quarterly budget vs. actuals, variance analysis, and operational expenditure metrics.</p>
+                    <div class="tags">
+                        <span>Tableau</span>
+                        <span>SQL</span>
+                        <span>Advanced Excel</span>
+                        <span>DAX</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#dashboard" class="btn btn-outline"><i class="fa-solid fa-eye"></i> Demo</a>
+                        <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="section">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Technical Skills</h2>
+            <p>Core competencies, tools, and technical proficiency in data analytics.</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill">
+                <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                <h3>Python</h3>
+                <p>Data manipulation, cleaning, and statistical analysis using Pandas, NumPy, Scikit-Learn, and Matplotlib.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                <h3>SQL & Databases</h3>
+                <p>Writing complex CTEs, window functions, joins, and aggregating large datasets in PostgreSQL, MySQL & BigQuery.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-icon"><i class="fa-solid fa-chart-column"></i></div>
+                <h3>Power BI</h3>
+                <p>Developing interactive reporting dashboards, custom DAX measures, star schema data models, and ETL pipelines.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                <h3>Tableau</h3>
+                <p>Creating dynamic visual dashboards, calculated fields, parameters, and geospatial visualizations.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-icon"><i class="fa-solid fa-file-excel"></i></div>
+                <h3>Advanced Excel</h3>
+                <p>Expert in Pivot Tables, XLOOKUP, Power Query, VBA macros, automated financial modeling, and data auditing.</p>
+            </div>
+            <div class="skill">
+                <div class="skill-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                <h3>Data Modeling & Storytelling</h3>
+                <p>Designing relational data schemas, identifying KPI trends, and communicating key data insights to stakeholders.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="section-heading">
+            <h2>Get In Touch</h2>
+            <p>Interested in collaborating or hiring for a data analytics role? Feel free to send a message!</p>
+        </div>
+        <div class="contact-grid">
+            <div>
+                <div class="card">
+                    <h3>Contact Information</h3>
+                    <p>I am available for full-time positions, freelance projects, and data consulting.</p>
+                    <div class="contact-links">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <small style="color:var(--muted); display:block;">Email</small>
+                                <a href="mailto:shristi.rawat.analytics@gmail.com">shristi.rawat.analytics@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <div>
+                                <small style="color:var(--muted); display:block;">LinkedIn</small>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin.com/in/shristi-rawat</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-github"></i>
+                            <div>
+                                <small style="color:var(--muted); display:block;">GitHub</small>
+                                <a href="https://github.com" target="_blank" rel="noopener">github.com/shristirawat</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <small style="color:var(--muted); display:block;">Location</small>
+                                <span>India (Open to Remote / Relocation)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="card">
+                <form class="contact-form" id="portfolioContactForm" onsubmit="handleFormSubmit(event)">
+                    <div>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Jane Doe">
+                    </div>
+                    <div>
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" required placeholder="jane@example.com">
+                    </div>
+                    <div>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required placeholder="Data Analyst Position / Project Query">
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" required placeholder="Hi Shristi, I'd like to discuss..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="justify-content: center; width: 100%;">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="alertBox" class="alert-box">
+                        Thank you! Your message has been sent successfully. I will get back to you shortly.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-content">
+        <div class="logo">Shristi <span>Rawat</span></div>
+        <p style="color: var(--muted); font-size: 14px;">© 2026 Shristi Rawat. All rights reserved. Powered by Data & Insights.</p>
+        <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:shristi.rawat.analytics@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="./script.js"></script>
+</body>
+</html>
